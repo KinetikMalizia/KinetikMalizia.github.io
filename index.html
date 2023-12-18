@@ -1,1 +1,41 @@
-Here are the cats
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .green {
+      background-color: green !important;
+    }
+  </style>
+  <title>Toggle Boxes</title>
+</head>
+<body>
+
+  <div class="box" id="box1"></div>
+  <div class="box" id="box2"></div>
+  <div class="box" id="box3"></div>
+
+  <div>
+    <button onclick="toggleBoxColor(1)">Toggle Box 1</button>
+    <button onclick="toggleBoxColor(2)">Toggle Box 2</button>
+    <button onclick="toggleBoxColor(3)">Toggle Box 3</button>
+  </div>
+
+  <script>
+    function toggleBoxColor(boxNumber) {
+      var box = document.getElementById('box' + boxNumber);
+      box.classList.toggle('green');
+    }
+  </script>
+
+</body>
+</html>
